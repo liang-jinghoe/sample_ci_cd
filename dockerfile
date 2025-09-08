@@ -9,4 +9,5 @@ WORKDIR /app
 COPY build/libs/hello-world-java-V1.jar app.jar
 
 # Run the Java application
-CMD ["java", "-jar", "app.jar"]
+# CMD ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]

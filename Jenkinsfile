@@ -25,19 +25,19 @@ pipeline {
             }
         }
     }
-}
 
-post {
-    always {
-        echo 'Cleaning workspace'
-        deleteDir()
-    }
+    post {
+        always {
+            echo 'Cleaning workspace'
+            deleteDir()
+        }
 
-    success {
-        echo 'Build succeeded'
-    }
+        success {
+            echo 'Build succeeded'
+        }
 
-    failure {
-        echo 'Build failed'
+        failure {
+            echo 'Build failed'
+        }
     }
 }
