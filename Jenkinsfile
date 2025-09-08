@@ -19,9 +19,21 @@ pipeline {
             }
         }
 
+        // stage('Deploy') {
+        //     steps {
+        //         powershell 'java -jar build/libs/hello-world-java-V1.jar'
+        //     }
+        // }
+
         stage('Deploy') {
             steps {
-                powershell 'java -jar build/libs/hello-world-java-V1.jar'
+                powershell 'docker build -t hello-world-java .'
+            }
+        }
+
+        stage('Production') {
+            steps {
+                powershell 'docker run hello-world-java'
             }
         }
     }
