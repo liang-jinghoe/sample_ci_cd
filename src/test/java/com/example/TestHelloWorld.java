@@ -3,8 +3,6 @@ package com.example;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-import java.beans.Transient;
-
 public class TestHelloWorld
 {
     @Test
